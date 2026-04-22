@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Runs output
+runs/
+data_aer/
+data_aer_gpu/
+
+# Large processed data
+datav1/training_data_log.npy
+datav1/fake_*
+datav1/aer_final.csv
+datav1/combined_highq.csv
+datav1/highq_collection.log
+datav1/*_collection.log
+datav1/*_first_run.csv
+datav1/*_second_run.csv
+datav1/*_third_run.csv
+
+# Logs
+*.log
+
+# Model results (keep only v7)
+results_v5/
+results_v6/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Installers
+Miniconda*.sh
+
+# Misc scripts not part of pipeline
+count.py
+compare_aer_vs_model.py
+build_test_dataset.py
+collect_highq_circuits.py
+generate_more_circuits.py
+evaluate_test.py
+demo_predict.py
+run_simulator.log
+test_run_circuit_Aer
+SETUP.md
