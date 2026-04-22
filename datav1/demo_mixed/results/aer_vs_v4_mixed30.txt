@@ -1,0 +1,47 @@
+
+  ──── LOW  (2–6 qubits) ────
+  Circuit                                        Actual   Predicted  
+-----------------------------------------------------------------------
+  low_q02_realamp_reps3_s0                       0.99ms      0.66ms  ✗
+  low_q03_su2_reps3_s1                           0.73ms      0.75ms  ✓
+  low_q04_twolocal_reps4_s2                      0.69ms      0.71ms  ✓
+  low_q04_realamp_reps5_s3                       0.58ms      0.77ms  ✗
+  low_q05_su2_reps4_s4                           0.94ms      0.95ms  ✓
+  low_q05_twolocal_reps5_s5                      1.06ms      1.14ms  ✓
+  low_q06_realamp_reps4_s6                       0.91ms      0.96ms  ✓
+  low_q06_su2_reps5_s7                           0.99ms      1.21ms  ✗
+  low_q06_twolocal_reps6_s8                      1.07ms      1.34ms  ✗
+  low_q06_realamp_reps8_s9                       1.02ms      1.12ms  ✓
+-----------------------------------------------------------------------
+
+  ──── MED  (8–14 qubits) ────
+  Circuit                                        Actual   Predicted  
+-----------------------------------------------------------------------
+  med_q08_realamp_reps3_s10                      1.30ms      1.71ms  ✗
+  med_q09_su2_reps3_s11                          2.39ms      2.22ms  ✓
+  med_q10_twolocal_reps3_s12                     2.80ms      2.98ms  ✓
+  med_q10_realamp_reps4_s13                      2.13ms      2.36ms  ✓
+  med_q11_su2_reps4_s14                          3.17ms      3.41ms  ✓
+  med_q12_twolocal_reps4_s15                     7.25ms      7.79ms  ✓
+  med_q12_realamp_reps5_s16                      3.85ms      3.68ms  ✓
+  med_q13_su2_reps4_s17                          9.00ms      7.65ms  ✓
+  med_q14_twolocal_reps5_s18                    34.45ms     67.50ms  ✗
+  med_q14_realamp_reps6_s19                     12.63ms     12.61ms  ✓
+-----------------------------------------------------------------------
+
+  ──── HIGH (15–25 qubits) ────
+  Circuit                                        Actual   Predicted  
+-----------------------------------------------------------------------
+  high_q15_realamp_reps3_s20                     3.64ms      3.38ms  ✓
+  high_q16_su2_reps3_s21                         5.57ms      5.39ms  ✓
+  high_q17_twolocal_reps3_s22                   47.67ms     75.25ms  ✗
+  high_q18_realamp_reps4_s23                    17.60ms     16.68ms  ✓
+  high_q19_su2_reps4_s24                        36.00ms     34.73ms  ✓
+  high_q20_twolocal_reps4_s25                 1010.20ms   1175.53ms  ✗
+  high_q21_realamp_reps3_s26                   111.33ms    169.10ms  ✗
+  high_q22_su2_reps3_s27                       223.86ms     51.74ms  ✗
+  high_q24_twolocal_reps3_s28                10934.49ms   7551.23ms  ✗
+  high_q25_realamp_reps3_s29                  2039.37ms   3411.15ms  ✗
+-----------------------------------------------------------------------
+
+  ✓ within 15%: 18/30 circuits
