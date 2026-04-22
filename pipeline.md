@@ -9,12 +9,23 @@ Everything is isolated under `runs/<name>/` — nothing touches existing data.
 
 ### Option A — Conda (recommended)
 ```bash
+# Create and activate environment
 conda env create -f environment.yml
 conda activate qet-env
 ```
 
 ### Option B — pip
 ```bash
+# Create virtual environment
+python -m venv qet-env
+
+# Activate (Linux / Mac)
+source qet-env/bin/activate
+
+# Activate (Windows)
+qet-env\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
