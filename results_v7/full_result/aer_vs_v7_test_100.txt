@@ -1,0 +1,174 @@
+
+===========================================================================
+  TEST_100  (124 circuits)  — Aer vs V7
+===========================================================================
+
+  ──── LOW  (2–6 qubits) ────
+  Circuit                                            Actual  Predicted  
+--------------------------------------------------------------------------
+  ae_indep_qiskit_2_ext1                             0.50ms     1.16ms  ✗
+  ae_indep_qiskit_2_ext2                             0.52ms     1.16ms  ✗
+  ae_indep_qiskit_2_ext3                             0.48ms     1.16ms  ✗
+  dj_indep_qiskit_2_ext1                             1.09ms     0.89ms  ✗
+  ghz_indep_qiskit_2_ext1                            0.97ms     0.94ms  ✓
+  ghz_indep_qiskit_2_ext2                            0.78ms     0.80ms  ✓
+  ae_indep_qiskit_3_ext1                             0.58ms     0.57ms  ✓
+  ae_indep_qiskit_3_ext2                             0.44ms     0.57ms  ✗
+  ae_indep_qiskit_3_ext3                             0.50ms     0.57ms  ✓
+  dj_indep_qiskit_3_ext1                             1.28ms     1.49ms  ✗
+  ae_indep_qiskit_4_ext1                             0.63ms     0.60ms  ✓
+  ae_indep_qiskit_4_ext2                             0.68ms     0.60ms  ✓
+  ae_indep_qiskit_4_ext3                             0.63ms     0.60ms  ✓
+  dj_indep_qiskit_4_ext1                             1.48ms     1.68ms  ✓
+  ae_indep_qiskit_5_ext1                             0.55ms     0.77ms  ✗
+  ae_indep_qiskit_5_ext2                             0.80ms     0.77ms  ✓
+  ae_indep_qiskit_5_ext3                             0.69ms     0.77ms  ✓
+  dj_indep_qiskit_5_ext1                             1.88ms     2.14ms  ✓
+  ae_indep_qiskit_6_ext1                             0.77ms     0.94ms  ✗
+  ae_indep_qiskit_6_ext2                             0.82ms     0.94ms  ✗
+  ae_indep_qiskit_6_ext3                             0.81ms     0.94ms  ✗
+  dj_indep_qiskit_6_ext1                             2.68ms     2.01ms  ✗
+--------------------------------------------------------------------------
+  ─── Metrics — LOW  (2–6 qubits)
+  R²  (log)      : 0.4204
+  MSE (log)      : 0.121007
+  NMSE (log)     : 0.579650
+  Mean abs error : 0.213 ms
+  Max  abs error : 0.686 ms
+  ✓ within 15%   : 11/22 circuits
+
+  ──── MED  (7–14 qubits) ────
+  Circuit                                            Actual  Predicted  
+--------------------------------------------------------------------------
+  ae_indep_qiskit_7_ext1                             0.94ms     1.15ms  ✗
+  ae_indep_qiskit_7_ext2                             0.86ms     1.15ms  ✗
+  ae_indep_qiskit_7_ext3                             1.41ms     1.15ms  ✗
+  dj_indep_qiskit_7_ext1                             2.46ms     2.94ms  ✗
+  ae_indep_qiskit_8_ext1                             1.94ms     1.51ms  ✗
+  ae_indep_qiskit_8_ext2                             1.21ms     1.51ms  ✗
+  ae_indep_qiskit_8_ext3                             1.23ms     1.51ms  ✗
+  dj_indep_qiskit_8_ext1                             2.93ms     2.92ms  ✓
+  ae_indep_qiskit_9_ext1                             1.72ms     1.87ms  ✓
+  ae_indep_qiskit_9_ext2                             1.61ms     1.87ms  ✗
+  ae_indep_qiskit_9_ext3                             1.62ms     1.87ms  ✗
+  dj_indep_qiskit_9_ext1                             3.37ms     3.26ms  ✓
+  ae_indep_qiskit_10_ext1                            1.83ms     1.99ms  ✓
+  ae_indep_qiskit_10_ext2                            1.76ms     1.99ms  ✓
+  ae_indep_qiskit_10_ext3                            1.77ms     1.99ms  ✓
+  dj_indep_qiskit_10_ext1                            3.91ms     3.51ms  ✓
+  ghz_indep_qiskit_10_ext1                           3.84ms     3.42ms  ✓
+  ghz_indep_qiskit_10_ext2                           3.93ms     2.60ms  ✗
+  ae_indep_qiskit_11_ext1                            2.35ms     2.02ms  ✓
+  ae_indep_qiskit_11_ext2                            2.20ms     2.02ms  ✓
+  ae_indep_qiskit_11_ext3                            2.53ms     2.02ms  ✗
+  dj_indep_qiskit_11_ext1                            4.23ms     3.98ms  ✓
+  ghz_indep_qiskit_11_ext1                           4.35ms     3.95ms  ✓
+  ghz_indep_qiskit_11_ext2                           4.20ms     3.08ms  ✗
+  ae_indep_qiskit_12_ext1                            3.51ms     2.96ms  ✗
+  ae_indep_qiskit_12_ext2                            3.01ms     2.96ms  ✓
+  ae_indep_qiskit_12_ext3                            3.76ms     2.96ms  ✗
+  dj_indep_qiskit_12_ext1                            5.50ms     4.27ms  ✗
+  ghz_indep_qiskit_12_ext1                           4.68ms     4.50ms  ✓
+  ghz_indep_qiskit_12_ext2                           4.77ms     4.19ms  ✓
+  ae_indep_qiskit_13_ext1                            5.23ms     3.61ms  ✗
+  ae_indep_qiskit_13_ext2                            5.04ms     3.61ms  ✗
+  ae_indep_qiskit_13_ext3                            5.00ms     3.61ms  ✗
+  dj_indep_qiskit_13_ext1                            5.29ms     4.26ms  ✗
+  ghz_indep_qiskit_13_ext1                           5.26ms     5.38ms  ✓
+  ghz_indep_qiskit_13_ext2                           5.37ms     5.06ms  ✓
+  ae_indep_qiskit_14_ext1                            9.31ms     6.10ms  ✗
+  ae_indep_qiskit_14_ext2                           10.45ms     6.10ms  ✗
+  ae_indep_qiskit_14_ext3                            9.28ms     6.10ms  ✗
+  dj_indep_qiskit_14_ext1                            6.05ms     5.48ms  ✓
+  ghz_indep_qiskit_14_ext1                           5.74ms     5.36ms  ✓
+  ghz_indep_qiskit_14_ext2                           6.35ms     5.06ms  ✗
+--------------------------------------------------------------------------
+  ─── Metrics — MED  (7–14 qubits)
+  R²  (log)      : 0.8680
+  MSE (log)      : 0.050378
+  NMSE (log)     : 0.132012
+  Mean abs error : 0.736 ms
+  Max  abs error : 4.348 ms
+  ✓ within 15%   : 19/42 circuits
+
+  ──── HIGH  (15+ qubits) ────
+  Circuit                                            Actual  Predicted  
+--------------------------------------------------------------------------
+  ae_indep_qiskit_15_ext1                            4.08ms     4.09ms  ✓
+  ae_indep_qiskit_15_ext2                            4.20ms     4.09ms  ✓
+  ae_indep_qiskit_15_ext3                            4.65ms     4.09ms  ✓
+  dj_indep_qiskit_15_ext1                            6.75ms     5.83ms  ✓
+  ghz_indep_qiskit_15_ext1                           6.54ms     6.06ms  ✓
+  ghz_indep_qiskit_15_ext2                           6.45ms     6.18ms  ✓
+  ae_indep_qiskit_16_ext1                            5.86ms     6.19ms  ✓
+  ae_indep_qiskit_16_ext2                            6.05ms     6.19ms  ✓
+  ae_indep_qiskit_16_ext3                            6.62ms     6.19ms  ✓
+  dj_indep_qiskit_16_ext1                            7.39ms     6.28ms  ✓
+  ghz_indep_qiskit_16_ext1                           7.09ms     6.55ms  ✓
+  ghz_indep_qiskit_16_ext2                           7.29ms     6.62ms  ✓
+  ae_indep_qiskit_17_ext1                            9.78ms    10.68ms  ✓
+  ae_indep_qiskit_17_ext2                            9.62ms    10.68ms  ✓
+  ae_indep_qiskit_17_ext3                            9.76ms    10.68ms  ✓
+  dj_indep_qiskit_17_ext1                            7.97ms     7.21ms  ✓
+  ghz_indep_qiskit_17_ext1                           7.76ms     7.41ms  ✓
+  ghz_indep_qiskit_17_ext2                           8.49ms     7.33ms  ✓
+  ae_indep_qiskit_18_ext1                           17.29ms    20.05ms  ✗
+  ae_indep_qiskit_18_ext2                           17.36ms    20.05ms  ✗
+  ae_indep_qiskit_18_ext3                           19.46ms    20.05ms  ✓
+  dj_indep_qiskit_18_ext1                            9.02ms     8.27ms  ✓
+  ghz_indep_qiskit_18_ext1                           8.47ms     7.94ms  ✓
+  ghz_indep_qiskit_18_ext2                          10.10ms     7.68ms  ✗
+  ae_indep_qiskit_19_ext1                           34.40ms    40.19ms  ✗
+  ae_indep_qiskit_19_ext2                           36.94ms    40.19ms  ✓
+  ae_indep_qiskit_19_ext3                           34.29ms    40.19ms  ✗
+  dj_indep_qiskit_19_ext1                            9.28ms     9.11ms  ✓
+  ghz_indep_qiskit_19_ext1                           9.64ms     8.43ms  ✓
+  ghz_indep_qiskit_19_ext2                           9.48ms     7.82ms  ✗
+  ae_indep_qiskit_20_ext1                           71.71ms    83.67ms  ✗
+  ae_indep_qiskit_20_ext2                           71.78ms    83.67ms  ✗
+  ae_indep_qiskit_20_ext3                          101.51ms    83.67ms  ✗
+  dj_indep_qiskit_20_ext1                           10.25ms     9.68ms  ✓
+  ghz_indep_qiskit_20_ext1                          10.13ms    10.10ms  ✓
+  ghz_indep_qiskit_20_ext2                          10.99ms     9.46ms  ✓
+  high_indep_realamp_21_test_100_s3210              44.92ms    40.49ms  ✓
+  high_indep_su2_21_test_100_s3211                  40.18ms    42.76ms  ✓
+  high_indep_realamp_22_test_100_s3221              84.71ms    84.42ms  ✓
+  high_indep_twolocal_22_test_100_s3220            755.90ms   726.17ms  ✓
+  high_indep_su2_23_test_100_s3230                 174.44ms   172.02ms  ✓
+  high_indep_twolocal_23_test_100_s3231           1694.14ms  1604.71ms  ✓
+  high_indep_realamp_24_test_100_s3240             355.82ms   347.12ms  ✓
+  high_indep_su2_24_test_100_s3241                 361.12ms   359.99ms  ✓
+  high_indep_realamp_25_test_100_s3251             740.79ms   719.84ms  ✓
+  high_indep_twolocal_25_test_100_s3250           7898.45ms  7881.59ms  ✓
+  high_indep_su2_26_test_100_s3260                1538.20ms  1546.45ms  ✓
+  high_indep_twolocal_26_test_100_s3261           17026.88ms  16758.83ms  ✓
+  high_indep_realamp_27_test_100_s3270            3153.39ms  3179.94ms  ✓
+  high_indep_su2_27_test_100_s3271                3146.34ms  3190.97ms  ✓
+  high_indep_realamp_28_test_100_s3281            6518.88ms  6450.72ms  ✓
+  high_indep_twolocal_28_test_100_s3280           78675.65ms  64438.26ms  ✗
+  high_indep_su2_29_test_100_s3290                13603.49ms  13307.85ms  ✓
+  high_indep_twolocal_29_test_100_s3291           169981.73ms  103029.12ms  ✗
+  high_indep_realamp_30_test_100_s3300            28036.45ms  27454.92ms  ✓
+  high_indep_su2_30_test_100_s3301                28873.82ms  27149.84ms  ✓
+  high_indep_realamp_31_test_100_s3311            57289.27ms  53206.84ms  ✓
+  high_indep_twolocal_31_test_100_s3310           797963.98ms  225112.27ms  ✗
+  high_indep_su2_32_test_100_s3320                117676.96ms  86514.32ms  ✗
+  high_indep_twolocal_32_test_100_s3321           1660242.09ms  305601.93ms  ✗
+--------------------------------------------------------------------------
+  ─── Metrics — HIGH  (15+ qubits)
+  R²  (log)      : 0.9929
+  MSE (log)      : 0.089864
+  NMSE (log)     : 0.007121
+  Mean abs error : 34120.042 ms
+  Max  abs error : 1354640.167 ms
+  ✓ within 15%   : 46/60 circuits
+
+===========================================================================
+  ─── Metrics — Overall
+  R²  (log)      : 0.9924
+  MSE (log)      : 0.082015
+  NMSE (log)     : 0.007551
+  Mean abs error : 16509.985 ms
+  Max  abs error : 1354640.167 ms
+  ✓ within 15%   : 76/124 circuits
+===========================================================================

@@ -1,0 +1,53 @@
+============================================================
+QET Prediction — v7 Results
+============================================================
+Model      : 4x TransformerConv + 4-layer MLP + Dropout(0.1) (966,785 params)
+Dataset    : 4397 circuits (combined_highq.csv)
+             3138 original (2–27q) + 1259 new high-q (21–30q balanced)
+Split      : Stratified 80/10/10 by log(time) bins (seed=1234)
+             Train: 3517  Val: 437  Test: 443
+Optimizer  : Adam  lr=3e-4  weight_decay=1e-4
+Scheduler  : Cosine (500 epochs)
+Batch size : 32
+Simulator  : AerSimulator, 3-run average, no noise
+
+------------------------------------------------------------
+TRAINING
+------------------------------------------------------------
+Best val R²   : 0.9956  (epoch 500)
+Best val MSE  : 0.0543
+Best val NMSE : 0.0044
+
+------------------------------------------------------------
+EXTERNAL TEST SETS  (unseen _ext circuits, re-extracted with v7 stats)
+------------------------------------------------------------
+Set       Samples   R²       MSE      NMSE     MAE(ms)
+test_50      50    0.9539   0.0965   0.0461     1.812
+test_100    100    0.9626   0.0529   0.0374     1.178
+test_200    185    0.9376   0.0592   0.0624     0.886
+test_300    285    0.9371   0.0686   0.0629     0.811
+
+------------------------------------------------------------
+KEY IMPROVEMENT vs PREVIOUS VERSIONS
+------------------------------------------------------------
+  Val R² jumped from 0.9527 (v5) → 0.9956 (v7)
+  Root cause: added 1259 balanced circuits for 21–30q
+  Previous: 13 circuits each for 21–27q, 0 for 28–30q
+  Now:      150 circuits each for 21–27q, 100 for 28–30q
+
+------------------------------------------------------------
+VERSION COMPARISON (val R²)
+------------------------------------------------------------
+  v4: 0.9483  (3 layers, 300ep, no dropout)
+  v5: 0.9527  (4 layers, 500ep, dropout=0.1, bs=32)
+  v6: 0.9501  (3 layers, 500ep, dropout=0.1, bs=64)
+  v7: 0.9956  (4 layers, 500ep, dropout=0.1, bs=32, 4397 circuits)
+
+------------------------------------------------------------
+SAVED FILES
+------------------------------------------------------------
+Model        : results_v7/full_result/model.pth
+Named backup : results_v7/full_result/model_cosine_500ep_4layers_r2-9956.pth
+Stats        : results_v7/full_result/standardization_stats.pth
+Split indices: results_v7/full_result/split_indices.pth
+============================================================

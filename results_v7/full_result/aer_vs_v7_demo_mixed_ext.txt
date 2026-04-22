@@ -1,0 +1,104 @@
+
+===========================================================================
+  DEMO_MIXED + EXTRAPOLATION  (42 circuits, 2–32q)  — Aer vs V7
+===========================================================================
+
+  ──── LOW  (2–6 qubits) ────
+  Circuit                                            Actual  Predicted  
+--------------------------------------------------------------------------
+  low_q02_realamp_reps3_s0                           1.03ms     0.66ms  ✗
+  low_q03_su2_reps3_s1                               0.79ms     0.76ms  ✓
+  low_q04_twolocal_reps4_s2                          0.95ms     0.85ms  ✓
+  low_q04_realamp_reps5_s3                           0.76ms     0.82ms  ✓
+  low_q05_su2_reps4_s4                               0.98ms     1.04ms  ✓
+  low_q05_twolocal_reps5_s5                          0.88ms     1.26ms  ✗
+  low_q06_realamp_reps4_s6                           1.06ms     1.01ms  ✓
+  low_q06_su2_reps5_s7                               1.10ms     1.31ms  ✗
+  low_q06_twolocal_reps6_s8                          1.25ms     1.45ms  ✗
+  low_q06_realamp_reps8_s9                           1.04ms     1.35ms  ✗
+--------------------------------------------------------------------------
+  ─── Metrics — LOW  (2–6 qubits)
+  R²  (log)      : -1.2936
+  MSE (log)      : 0.047155
+  NMSE (log)     : 2.293595
+  Mean abs error : 0.178 ms
+  Max  abs error : 0.381 ms
+  ✓ within 15%   : 5/10 circuits
+
+  ──── MED  (7–14 qubits) ────
+  Circuit                                            Actual  Predicted  
+--------------------------------------------------------------------------
+  med_q08_realamp_reps3_s10                          1.29ms     1.46ms  ✓
+  med_q09_su2_reps3_s11                              2.12ms     2.02ms  ✓
+  med_q10_twolocal_reps3_s12                         2.85ms     2.63ms  ✓
+  med_q10_realamp_reps4_s13                          2.17ms     2.45ms  ✓
+  med_q11_su2_reps4_s14                              3.13ms     3.34ms  ✓
+  med_q12_twolocal_reps4_s15                         7.53ms     9.05ms  ✗
+  med_q12_realamp_reps5_s16                          3.97ms     3.52ms  ✓
+  med_q13_su2_reps4_s17                              7.11ms     7.76ms  ✓
+  med_q14_twolocal_reps5_s18                        35.00ms    68.40ms  ✗
+  med_q14_realamp_reps6_s19                         12.95ms    13.13ms  ✓
+--------------------------------------------------------------------------
+  ─── Metrics — MED  (7–14 qubits)
+  R²  (log)      : 0.9377
+  MSE (log)      : 0.054776
+  NMSE (log)     : 0.062260
+  Mean abs error : 3.718 ms
+  Max  abs error : 33.402 ms
+  ✓ within 15%   : 8/10 circuits
+
+  ──── HIGH  (15–30 qubits  ← training range) ────
+  Circuit                                            Actual  Predicted  
+--------------------------------------------------------------------------
+  high_q15_realamp_reps3_s20                         6.56ms     3.37ms  ✗
+  high_q16_su2_reps3_s21                             8.90ms     5.72ms  ✗
+  high_q17_twolocal_reps3_s22                       71.68ms    79.19ms  ✓
+  high_q18_realamp_reps4_s23                        21.21ms    16.65ms  ✗
+  high_q19_su2_reps4_s24                            38.69ms    33.35ms  ✓
+  high_q20_twolocal_reps4_s25                      719.68ms  1251.29ms  ✗
+  high_q21_realamp_reps3_s100                      121.13ms   112.94ms  ✓
+  high_q21_realamp_reps3_s26                       122.18ms   112.94ms  ✓
+  high_q22_su2_reps3_s101                          250.42ms   219.13ms  ✓
+  high_q22_su2_reps3_s27                           239.92ms   219.13ms  ✓
+  high_q23_twolocal_reps2_s102                    3353.29ms  3225.45ms  ✓
+  high_q24_realamp_reps3_s103                     1000.40ms   970.79ms  ✓
+  high_q24_twolocal_reps3_s28                     10934.01ms  10462.28ms  ✓
+  high_q25_realamp_reps3_s29                      2064.07ms  2005.04ms  ✓
+  high_q25_su2_reps3_s104                         2038.18ms  1979.29ms  ✓
+  high_q26_realamp_reps2_s105                     2879.95ms  2827.57ms  ✓
+  high_q27_su2_reps2_s106                         6003.91ms  5944.15ms  ✓
+  high_q28_realamp_reps2_s107                     12332.68ms  12161.95ms  ✓
+  high_q29_su2_reps2_s108                         25569.85ms  25586.29ms  ✓
+  high_q30_realamp_reps1_s109                     27887.47ms  27454.92ms  ✓
+--------------------------------------------------------------------------
+  ─── Metrics — HIGH  (15–30 qubits  ← training range)
+  R²  (log)      : 0.9916
+  MSE (log)      : 0.054052
+  NMSE (log)     : 0.008417
+  Mean abs error : 105.192 ms
+  Max  abs error : 531.610 ms
+  ✓ within 15%   : 16/20 circuits
+
+  ──── EXTRAP  (31–32 qubits  ← out of distribution) ────
+  Circuit                                            Actual  Predicted  
+--------------------------------------------------------------------------
+  high_q31_realamp_reps1_s200                     58512.90ms  53206.84ms  ✓
+  high_q32_su2_reps1_s201                         119589.69ms  86514.28ms  ✗
+--------------------------------------------------------------------------
+  ─── Metrics — EXTRAP  (31–32 qubits  ← out of distribution)
+  R²  (log)      : 0.5544
+  MSE (log)      : 0.056928
+  NMSE (log)     : 0.445646
+  Mean abs error : 19190.736 ms
+  Max  abs error : 33075.406 ms
+  ✓ within 15%   : 1/2 circuits
+
+===========================================================================
+  ─── Metrics — Overall
+  R²  (log)      : 0.9955
+  MSE (log)      : 0.052509
+  NMSE (log)     : 0.004473
+  Mean abs error : 53.570 ms
+  Max  abs error : 531.610 ms
+  ✓ within 15%   : 29/40 circuits
+===========================================================================

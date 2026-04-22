@@ -1,0 +1,100 @@
+
+===========================================================================
+  TEST_50  (50 circuits)  — Aer vs V7
+===========================================================================
+
+  ──── LOW  (2–6 qubits) ────
+  Circuit                                            Actual  Predicted  
+--------------------------------------------------------------------------
+  ae_indep_qiskit_2_ext1                             0.55ms     1.16ms  ✗
+  ae_indep_qiskit_2_ext2                             0.62ms     1.16ms  ✗
+  ae_indep_qiskit_2_ext3                             0.67ms     1.16ms  ✗
+  ae_indep_qiskit_3_ext1                             0.57ms     0.57ms  ✓
+  ae_indep_qiskit_3_ext2                             1.36ms     0.57ms  ✗
+  ae_indep_qiskit_3_ext3                             0.56ms     0.57ms  ✓
+  ae_indep_qiskit_4_ext1                             0.57ms     0.60ms  ✓
+  ae_indep_qiskit_4_ext2                             0.67ms     0.60ms  ✓
+  ae_indep_qiskit_4_ext3                             0.56ms     0.60ms  ✓
+  ae_indep_qiskit_5_ext1                             0.79ms     0.77ms  ✓
+  ae_indep_qiskit_5_ext2                             0.74ms     0.77ms  ✓
+  ae_indep_qiskit_5_ext3                             1.20ms     0.77ms  ✗
+  ae_indep_qiskit_6_ext1                             1.31ms     0.94ms  ✗
+  ae_indep_qiskit_6_ext2                             0.85ms     0.94ms  ✓
+  ae_indep_qiskit_6_ext3                             0.90ms     0.94ms  ✓
+--------------------------------------------------------------------------
+  ─── Metrics — LOW  (2–6 qubits)
+  R²  (log)      : -0.6806
+  MSE (log)      : 0.157948
+  NMSE (log)     : 1.680645
+  Mean abs error : 0.238 ms
+  Max  abs error : 0.795 ms
+  ✓ within 15%   : 9/15 circuits
+
+  ──── MED  (7–14 qubits) ────
+  Circuit                                            Actual  Predicted  
+--------------------------------------------------------------------------
+  ae_indep_qiskit_7_ext1                             0.96ms     1.15ms  ✗
+  ae_indep_qiskit_7_ext2                             0.91ms     1.15ms  ✗
+  ae_indep_qiskit_10_ext1                            2.16ms     1.99ms  ✓
+  ae_indep_qiskit_10_ext2                            2.26ms     1.99ms  ✓
+  ae_indep_qiskit_10_ext3                            1.97ms     1.99ms  ✓
+  ae_indep_qiskit_11_ext1                            2.51ms     2.02ms  ✗
+  ae_indep_qiskit_11_ext2                            2.25ms     2.02ms  ✓
+  ae_indep_qiskit_11_ext3                            3.36ms     2.02ms  ✗
+  ae_indep_qiskit_12_ext1                            3.04ms     2.96ms  ✓
+  ae_indep_qiskit_12_ext2                            3.12ms     2.96ms  ✓
+  ae_indep_qiskit_12_ext3                            3.19ms     2.96ms  ✓
+  ae_indep_qiskit_13_ext1                            5.01ms     3.61ms  ✗
+  ae_indep_qiskit_13_ext2                            6.33ms     3.61ms  ✗
+  ae_indep_qiskit_13_ext3                            5.10ms     3.61ms  ✗
+  ae_indep_qiskit_14_ext1                           11.55ms     6.10ms  ✗
+  ae_indep_qiskit_14_ext2                            9.95ms     6.10ms  ✗
+  ae_indep_qiskit_14_ext3                            9.41ms     6.10ms  ✗
+--------------------------------------------------------------------------
+  ─── Metrics — MED  (7–14 qubits)
+  R²  (log)      : 0.7905
+  MSE (log)      : 0.106836
+  NMSE (log)     : 0.209472
+  Mean abs error : 1.273 ms
+  Max  abs error : 5.452 ms
+  ✓ within 15%   : 7/17 circuits
+
+  ──── HIGH  (15+ qubits) ────
+  Circuit                                            Actual  Predicted  
+--------------------------------------------------------------------------
+  ae_indep_qiskit_15_ext1                            4.25ms     4.09ms  ✓
+  ae_indep_qiskit_15_ext2                            4.20ms     4.09ms  ✓
+  ae_indep_qiskit_15_ext3                            4.66ms     4.09ms  ✓
+  ae_indep_qiskit_16_ext1                            5.89ms     6.19ms  ✓
+  ae_indep_qiskit_16_ext2                           11.70ms     6.19ms  ✗
+  ae_indep_qiskit_16_ext3                            7.32ms     6.19ms  ✗
+  ae_indep_qiskit_17_ext1                            9.77ms    10.68ms  ✓
+  ae_indep_qiskit_17_ext2                           12.42ms    10.68ms  ✓
+  ae_indep_qiskit_17_ext3                            9.51ms    10.68ms  ✓
+  ae_indep_qiskit_18_ext1                           17.29ms    20.05ms  ✗
+  ae_indep_qiskit_18_ext2                           18.85ms    20.05ms  ✓
+  ae_indep_qiskit_18_ext3                           18.28ms    20.05ms  ✓
+  ae_indep_qiskit_19_ext1                           44.44ms    40.19ms  ✓
+  ae_indep_qiskit_19_ext2                           34.94ms    40.19ms  ✗
+  ae_indep_qiskit_19_ext3                           43.06ms    40.19ms  ✓
+  ae_indep_qiskit_20_ext1                           73.14ms    83.67ms  ✓
+  ae_indep_qiskit_20_ext2                           72.02ms    83.67ms  ✗
+  ae_indep_qiskit_20_ext3                           70.13ms    83.67ms  ✗
+--------------------------------------------------------------------------
+  ─── Metrics — HIGH  (15+ qubits)
+  R²  (log)      : 0.9619
+  MSE (log)      : 0.035564
+  NMSE (log)     : 0.038134
+  Mean abs error : 3.632 ms
+  Max  abs error : 13.534 ms
+  ✓ within 15%   : 12/18 circuits
+
+===========================================================================
+  ─── Metrics — Overall
+  R²  (log)      : 0.9539
+  MSE (log)      : 0.096512
+  NMSE (log)     : 0.046119
+  Mean abs error : 1.812 ms
+  Max  abs error : 13.534 ms
+  ✓ within 15%   : 28/50 circuits
+===========================================================================
